@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闯关游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-left">
+            <h1><span id="level">1</span></h1> <!-- 修改此处以显示关卡名称 -->
+            <div id="score">总分：0</div> <!-- 添加总分显示 -->
+            <input type="text" id="icon-input" placeholder="输入Base64图片">
+            <div id="game-board"></div>
+            <button id="next-level-btn" disabled>下一关</button>
+            <button id="reset-btn">重置</button> <!-- 添加重置按钮 -->
+        </div>
+    </div>
+    <div id="level-times"></div> <!-- 移动到 game-container 下方 -->
+    <canvas id="fireworks-canvas" style="position: absolute; top: 0; left: 0; pointer-events: none;"></canvas> <!-- 添加Canvas元素 -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        // 动态生成时间戳参数以避免缓存
+        const timestamp = new Date().getTime();
+        document.write('<script src="game.js?' + timestamp + '"><\/script>');
+    </script>
+</body>
+</html>

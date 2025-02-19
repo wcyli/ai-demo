@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; // 添加底部间距
+}
+
+#game-left {
+    flex: 1;
+    text-align: center;
+}
+
+#game-board {
+    margin: 20px 0;
+    width: 1000px; /* 设置宽度为1000px */
+    height: 550px; /* 设置高度为550px */
+    border: 1px solid #000;
+    position: relative;
+    background-image: url('game.png'); /* 添加背景图片 */
+    background-size: cover; /* 调整背景图片大小 */
+}
+
+#level {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#level-times {
+    font-size: 18px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 20px; /* 添加顶部间距 */
+    display: block; // 修改为块级元素
+}
+
+#level-times div {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.movable-icon {
+    width: 60px; /* 修改宽度为60px */
+    height: 60px; /* 修改高度为60px */
+    cursor: move;
+    border-radius: 50%;
+}
